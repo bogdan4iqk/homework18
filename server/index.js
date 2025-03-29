@@ -54,10 +54,6 @@ app.get('/search', (req, res) => {
 	res.json(result)
 })
 
-app.use((req, res) => {
-	res.status(404).sendFile(getPath('404'))
-})
-
 app.listen(PORT, () => {
     console.log(`Server is listening port: ${PORT}`)
 })
