@@ -34,7 +34,7 @@ const postData = async e => {
 
 	const res = await postDataFunction('https://server-hm.onrender.com/addUser', newUser)
 
-	location.reload()
+	return res
 }
 
 const searchUser = async e => {
