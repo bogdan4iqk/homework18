@@ -9,7 +9,7 @@ const input = document.querySelector('.name')
 const btn2 = document.querySelector('.find')
 
 const getData = async () => {
-    let res = JSON.parse(await getDataFunction('http://localhost:3000/getUsers'))
+    let res = JSON.parse(await getDataFunction('https://server-hm.onrender.com/getUsers'))
 
     res.forEach(el => {
         ul.insertAdjacentHTML(`beforeend`, 
@@ -32,7 +32,7 @@ const postData = async e => {
 		age: age
 	};
 
-	const res = await postDataFunction('http://localhost:3000/addUser', newUser)
+	const res = await postDataFunction('https://server-hm.onrender.com/addUser', newUser)
 
 	return res
 }
@@ -40,7 +40,7 @@ const postData = async e => {
 const searchUser = async e => {
     e.preventDefault()
     const name = input.value
-    const res = await fetch(`http://localhost:3000/search?query=${encodeURIComponent(name)}`)
+    const res = await fetch(`https://server-hm.onrender.com/search?query=${encodeURIComponent(name)}`)
 
     if(!res.ok) {
         console.error('Ошибка при получении данных')

@@ -16,7 +16,7 @@ app.use(morgan(':method :url :status'))
 // миддлвейр для парсинга входящего запроса
 app.use(express.json())
 // cors
-const allowedOrigins = ['http://127.0.0.1:5500']
+const allowedOrigins = ['https://homework18.onrender.com']
 app.use(
 	cors({
 		methods: ['GET', 'POST'],
