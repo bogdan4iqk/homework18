@@ -41,7 +41,6 @@ app.post('/addUser', (req, res) => {
 		)
 		users.push(user)
 		fs.writeFileSync(path.join(__dirname, 'db', 'db.json'), JSON.stringify(users))
-		res.send(`Пользователь ${user} успешно добавлен`)
 	} catch (error) {
 		console.log('Ошибка при добавлении пользователя', error)
 		res.send('Ошибка при добавлении пользователя', error)
